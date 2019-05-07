@@ -1,0 +1,174 @@
+/*variables*/
+/*reset*/
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font: 100% "Open Sans", sans-serif;
+  color: #fff; }
+
+/*Mixins*/
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  width: 2em;
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+  .hamburger.is-active:hover {
+    opacity: 0.7; }
+  .hamburger.is-active .hamburger-inner,
+  .hamburger.is-active .hamburger-inner::before,
+  .hamburger.is-active .hamburger-inner::after {
+    background-color: #fff; }
+
+.hamburger-box {
+  width: 40px;
+  height: 21px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -1.5px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 0px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -9px; }
+  .hamburger-inner::after {
+    bottom: -9px; }
+
+/*
+ * Minus
+ */
+.hamburger--minus .hamburger-inner::before, .hamburger--minus .hamburger-inner::after {
+  transition: bottom 0.08s 0s ease-out, top 0.08s 0s ease-out, opacity 0s linear; }
+.hamburger--minus.is-active .hamburger-inner::before, .hamburger--minus.is-active .hamburger-inner::after {
+  opacity: 0;
+  transition: bottom 0.08s ease-out, top 0.08s ease-out, opacity 0s 0.08s linear; }
+.hamburger--minus.is-active .hamburger-inner::before {
+  top: 0; }
+.hamburger--minus.is-active .hamburger-inner::after {
+  bottom: 0; }
+
+button:focus {
+  outline: none !important; }
+
+body {
+  color: #000; }
+
+.header {
+  background: #000; }
+
+.nav {
+  background: #000;
+  padding: 1em;
+  margin: 0 auto; }
+  @media (min-width: 576px) {
+    .nav {
+      max-width: 90em; } }
+  .nav__logo {
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em; }
+  .nav__is-active {
+    display: inline-block;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 3px 0;
+    top: 20px;
+    width: 100%;
+    right: 80px;
+    height: inherit; }
+    @media (max-width: 768px) {
+      .nav__is-active {
+        font-size: 0.9em; } }
+    @media (max-width: 467px) {
+      .nav__is-active {
+        font-size: 0.7em; } }
+
+.nav-item a {
+  font-size: 2.2em; }
+
+.content {
+  margin: 8em auto auto;
+  max-width: 90em;
+  padding: 1em; }
+  .content__wrapper {
+    background: #eee;
+    margin-bottom: 1em; }
+    @media (min-width: 992px) {
+      .content__wrapper {
+        max-width: 20em; } }
+    .content__wrapper img {
+      border: 2px #000;
+      width: 100%; }
+  .content__cat-title {
+    margin: 0 0 1em 0;
+    background: #eee;
+    padding: 0 1em; }
+    .content__cat-title h1 {
+      padding: .2em;
+      font-weight: bold; }
+  .content__comic-title {
+    margin: 1em 0 2em; }
+
+.carousel-inner {
+  max-height: 400px; }
+
+.carousel-inner > img {
+  width: 500px; }
+
+.character__wrapper, .comic__wrapper {
+  background: #eee; }
+.character img, .comic img {
+  width: 50%; }
+.character p, .comic p {
+  font-size: 1.5em; }
+
+.prices {
+  font-size: 1.2em;
+  font-weight: bold; }
+
+.footer {
+  border-top: 5px solid #f0141e; }
+
+/*# sourceMappingURL=style.css.map */
